@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	println("Powered by Brian.W AKA BigCHAN.")
 	parser := argparse.NewParser("backupshell", "Sqlserver backup shell exploit.")
 	baseUrl := parser.String("u", "baseUrl", &argparse.Options{Required: true, Help: "The base URL of the target.Use {*} as the payload inject point."})
 	method := parser.Selector("m", "method", []string{"GET", "POST"}, &argparse.Options{Required: true, Help: "The method to use."})

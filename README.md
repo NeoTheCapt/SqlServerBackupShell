@@ -1,6 +1,6 @@
 # An implement to get shell from Sql Injection point via backup-shell technic.
 ```
-# .\build4windows.exe -h
+Powered by Brian.W AKA BigCHAN.
 usage: backupshell [-h|--help] -u|--baseUrl "<value>" -m|--method (GET|POST)
                    [-p|--proxyUrl "<value>"] -s|--shell "<value>" [-H|--headers
                    "<value>" [-H|--headers "<value>" ...]] -d|--dbname
